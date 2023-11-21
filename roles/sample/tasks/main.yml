@@ -1,0 +1,10 @@
+- name: install nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: latest
+
+- name: started nginx
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
+    enabled: yes
