@@ -18,3 +18,14 @@
   become: true
   roles:
     - sample
+
+
+- name: print values
+  hosts: web
+  become: true
+  vars:
+    URL: google.com
+  tasks:
+    - name: print values
+      ansible.builtin.debug:
+        msg: url = {{ URL }}
