@@ -10,5 +10,5 @@
     - name: start nginx
       ansible.builtin.yum:
         name: nginx
-        state: restarted
+        state: started
         enable: yes
