@@ -3,7 +3,7 @@
   become: true
   vars:
     roles: true
-    designation: false
+    great: false
   tasks:
     - name: printing conditions
       ansible.builtin.debug:
@@ -13,5 +13,5 @@
 
     - name: printing conditions
       ansible.builtin.debug:
-        msg: role name is - devops engineer
-      when: designation is defined
+        msg: designation name is - devops engineer
+      when: great is defined
