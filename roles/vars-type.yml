@@ -1,0 +1,12 @@
+- name: variable types
+  hosts: localhost
+  connection: local
+  vars:
+    name: sivalingam
+    age: 23
+    weight: "True"
+  tasks:
+    - name: different types of variables
+      ansible.builtin.debug:
+      msg: name is - {{ name }}, age is - {{ age }}
+      when: weight is defined

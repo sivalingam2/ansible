@@ -9,4 +9,18 @@
     - name: printing loops
       ansible.builtin.debug:
         msg: fruit name is - {{ item }}
-      loop: {{ fruit }}
+      loop: "{{ fruit }}"
+
+    - name: printing loops
+      ansible.builtin.debug:
+        msg: fruit name is - {{ item }}
+      loop:
+        - orange
+        - apple
+        -
+    - name: printing loops
+      ansible.builtin.debug:
+        msg: fruit name is - {{ item. name }}, quantity is {{ item.quantity }}
+      loop:
+        - { name: "orange" , quantity: 200}
+        - { name: "apple" , quantity: 100}

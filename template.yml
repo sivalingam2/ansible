@@ -1,0 +1,10 @@
+- name: template
+  hosts: localhost
+  connection: local
+  vars:
+    fruits: apple
+  tasks:
+    - name: writing templates
+      ansible.builtin.template:
+        src: test.txt
+        dest: /tnm/siva.txt
