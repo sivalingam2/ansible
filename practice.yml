@@ -1,5 +1,6 @@
 - name: practice
   hosts: all
+  connection: local
   become: true
   tasks:
     - name: start nginx
